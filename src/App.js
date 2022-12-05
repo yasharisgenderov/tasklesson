@@ -9,7 +9,7 @@ const App = () => {
       <div className="counter">
         <button
           onClick={() => {
-            if (count > -10) setCount(count - 1);
+            count < -10 ? setCount(count - 1) : count;
           }}
         >
           -
@@ -18,7 +18,7 @@ const App = () => {
         <div className="count">{count}</div>
         <button
           onClick={() => {
-            if (count < 10) setCount(count + 1);
+            count < 10 ? setCount(count + 1) : count;
           }}
         >
           +
